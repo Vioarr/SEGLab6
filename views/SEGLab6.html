@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<!--Preventing FOUC
+		https://stackoverflow.com/questions/3221561/eliminate-flash-of-unstyled-content-->
+		<style>
+		html {
+		display: none;
+		}
+		</style>
+		<title>CSI Questionnaire</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Small website for lab 6 of SEG3125">
+		<link rel="stylesheet" type="text/css" href="/css/index.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li class="pull-left current">
+						<a href="http://localhost:3000/SEGLab6">~/home</a>
+					</li>
+					<li class="pull-right header-text">
+						<a href="http://localhost:3000/analysis">~/analysis</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<br>
+		
+		<div>
+			<p style="text-align: center;">
+				<img id="deulists" src="/assets/fencing.gif">
+			</p>
+			<h2 id="Title" style="text-align: center;">What makes good design?</h2>
+			<p>More specifically what makes good web design?
+				One of the reasons I'm taking this course is because I haven't figured out an answer for myself yet.
+			</p>
+			<p>Since none of us have anything better to do these days you can help me out by
+			looking at these websites down here and answering the questionnaire below about their design.</p>
+			<div style="text-align: center;">
+				<a href="https://time.gov" title="time.gov" style="color: white">
+					<img class="thumbnail" src="/assets/timegov.png" alt="time.gov">
+				</a>
+				<a href="https://wikipedia.org" title="wikipedia.org" style="color: white">
+					<img class="thumbnail" src="/assets/wikipedia.png" alt="wikipedia.png">
+				</a>
+				<a href="https://dannarchy.com" title="dannarchy.com" style="color: white">
+					<img class="thumbnail" src="/assets/dannarchy.png" alt="dannarchy.png">
+				</a>
+			</div>
+			<hr>
+			<div class="questions">
+				<h3 id="Quick Questionnaire">Quick Questionnaire</h3>
+				<ul>
+					<form>
+						<p>Name: <input type="text" name="name"></p>
+						<p>
+							Gender:
+							<select id="gender selector" name="gender">
+								<option value="Team_Hawk">Team Hawk</option>
+								<option value="Team_Bam">Team Bam</option>
+							</select>
+						</p>
+						<p>What was your favourite website?</p>
+						<input type="radio" id="time.gov" name="fav_web" value="time.gov">
+						<label for="time.gov">time.gov</label>
+						<br>
+						<input type="radio" id="wikipedia.org" name="fav_web" value="wikipedia.org">
+						<label for="wikipedia.org">wikipedia.org</label>
+						<br>
+						<input type="radio" id="dannarchy.com" name="fav_web" value="dannarchy.com">
+						<label for="dannarchy.com">dannarchy.com</label>
+						<br>
+						
+						<p>Would you go back to any of these websites? Select all that apply.</p>
+						<input type="checkbox" id="time.gov_c" name="goback_web" value="time.gov">
+						<label for="time.gov_c">time.gov</label>
+						<br>
+						<input type="checkbox" id="wikipedia.org_c" name="goback_web" value="wikipedia.org">
+						<label for="wikipedia.org_c">wikipedia.org</label>
+						<br>
+						<input type="checkbox" id="dannarchy.com_c" name="goback_web" value="dannarchy.com">
+						<label for="dannarchy.com_c">dannarchy.com</label>
+						<br>
+						<br>
+						
+						<label for="rating">How do you like this website?</label>
+						<div class="likert small-selection">
+							<li>Hated it</li>
+							<li>
+								<input type="radio" name="enjoyment" value="1" />
+							</li>
+							<li>
+								<input type="radio" name="enjoyment" value="2" />
+							</li>
+							<li>
+								<input type="radio" name="enjoyment" value="3" />
+							</li>
+							<li>
+								<input type="radio" name="enjoyment" value="4" />
+							</li>
+							<li>
+								<input type="radio" name="enjoyment" value="5" />
+							</li>
+							<li>Loved it</li>
+						</div>
+						<br>
+						
+						<p>Comments:</p>
+						<textarea type="text" rows="7" cols="60" name="comments"></textarea>
+						<br>
+						<button type="submit" id="submit-button">Submit</button>
+						<input type="reset" value="Reset"/>
+						<br>
+						<p id="thanks"></p>
+					</form>
+				</ul>
+			</div>
+		</div>
+		<script src="/assets/action.js"></script>
+		<footer>
+			<hr>
+			Designed by Ben Vokey for <a href="https://uottawa.brightspace.com/d2l/le/content/157905/Home">SEG3125</a>
+		</footer>
+	</body>
+</html>

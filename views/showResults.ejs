@@ -1,0 +1,69 @@
+<html lang="en-US">
+    <head>
+        <title>Survey Analysis</title>
+        <style>
+        html {
+        display: none;
+        }
+        </style>
+        <title>CSI Questionnaire</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Small website for lab 6 of SEG3125">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="pull-left current">
+                        <a href="http://localhost:3000/SEGLab6">~/home</a>
+                    </li>
+                    <li class="pull-right header-text">
+                        <a href="http://localhost:3000/analysis">~/analysis</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Survey analysis</h1>
+        <h3>Names</h3>
+        <ul>
+            <% for (var i=0; i<results[0].length; i++){ %>
+            <li><%= results[0][i].name %> :  <%= results[0][i].count %></li>
+            <% } %>
+        </ul>
+        <h3>Genders</h3>
+        <ul>
+            <% for (var i=0; i<results[1].length; i++){ %>
+            <li><%= results[1][i].gender %> :  <%= results[1][i].count %></li>
+            <% } %>
+        </ul>
+        <h3>Favourite Website</h3>
+        <ul>
+            <% for (var i=0; i<results[2].length; i++){ %>
+            <li><%= results[2][i].fav_web %> :  <%= results[2][i].count %></li>
+            <% } %>
+        </ul>
+        <h3>What website would you go back to?</h3>
+        <ul>
+            <% for (var i=0; i<results[3].length; i++){ %>
+            <li><%= results[3][i].goback_web %> :  <%= results[3][i].count %></li>
+            <% } %>
+        </ul>
+        <h3>Rate this website out of 5</h3>
+        <ul>
+            <% for (var i=0; i<results[4].length; i++){ %>
+            <li><%= results[4][i].enjoyment %> :  <%= results[4][i].count %></li>
+            <% } %>
+        </ul>
+        <h3>Comments</h3>
+        <ul>
+            <% for (var i=0; i<results[5].length; i++){ %>
+            <li><%= results[5][i].comments %> :  <%= results[5][i].count %></li>
+            <% } %>
+        </ul>
+        <footer>
+            <hr>
+            Designed by Ben Vokey for <a href="https://uottawa.brightspace.com/d2l/le/content/157905/Home">SEG3125</a>
+        </footer>
+    </body>
+</html>
